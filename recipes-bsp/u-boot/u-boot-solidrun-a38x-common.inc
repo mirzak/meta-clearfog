@@ -11,7 +11,10 @@ PE = "1"
 SRCREV = "ab15b2d5b6ee50c106628dc0aa5943747a5dd772"
 SRCBRANCH = "v2018.01-solidrun-a38x"
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/patches:"
+
 SRC_URI = "git://github.com/SolidRun/u-boot.git;branch=${SRCBRANCH}"
+SRC_URI_append = " file://0005-fw_env_main.c-Fix-incorrect-size-for-malloc-ed-strin.patch"
 
 S = "${WORKDIR}/git"
 
