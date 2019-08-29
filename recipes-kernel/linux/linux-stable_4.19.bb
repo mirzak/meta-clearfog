@@ -22,8 +22,8 @@ SRCREV = "6a31767f84ad31445865f1297d49937319f775c3"
 
 PV = "${LINUX_VERSION}"
 
+KCONFIG_MODE="--alldefconfig"
+
 # Override COMPATIBLE_MACHINE to include your machine in a copy of this recipe
 # file. Leaving it empty here ensures an early explicit build failure.
-COMPATIBLE_MACHINE = "clearfog"
-
-KCONFIG_MODE="--alldefconfig"
+COMPATIBLE_MACHINE = "(^clearfog$|^clearfog-pro$)"
