@@ -18,4 +18,4 @@ SRC_URI_append = " file://0005-fw_env_main.c-Fix-incorrect-size-for-malloc-ed-st
 
 S = "${WORKDIR}/git"
 
-COMPATIBLE_MACHINE = "(clearfog)"
+COMPATIBLE_MACHINE = "(^clearfog$|^clearfog-pro$)"
